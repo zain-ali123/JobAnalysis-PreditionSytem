@@ -38,6 +38,7 @@ const Wrapper = styled.div`
     background-size: cover;
     font-family: "Nunito Sans";
     width: 100%;
+    padding-bottom: 18%;
   }
   .tf-pb-130 {
     padding-bottom: 130px;

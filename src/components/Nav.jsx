@@ -4,17 +4,30 @@ import logo from "../assets/image 1.svg";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Nav() {
+  const navigate = useNavigate();
+
+  const handleWatchNewsClick = () => {
+    navigate("/news");
+  };
+  const handleLogoClick = () => {
+    navigate("/");
+  };
   return (
     <>
       <Wrapper>
         <div className="nav row d-flex justify-content-between">
           <div className="img col-lg-2 col-md-2 col-sm-3 col-2  ">
             <div>
-              <img src={logo} alt="logo.svg" className="logo" />
+              <img
+                onClick={handleLogoClick}
+                src={logo}
+                alt="logo.svg"
+                className="logo"
+              />
             </div>
           </div>
           <div className="NavLinks col-lg-10 col-md-10 col-sm-9 col-10 d-flex justify-content-between">
-            {/* <div
+            <div
               className="button2"
               style={{
                 marginRight: "0px",
@@ -22,10 +35,11 @@ export default function Nav() {
                 alignItems: "center",
               }}
             >
-              <div className="btn2">Create Profile</div>
-
-              <div className="btn2 mx-2">Login</div>
-            </div> */}
+              <div className="btn2" onClick={handleWatchNewsClick}>
+                Watch News
+              </div>
+              {/* <div className="btn2 mx-2">Login</div> */}
+            </div>
           </div>
         </div>
       </Wrapper>
@@ -34,6 +48,9 @@ export default function Nav() {
 }
 
 const Wrapper = styled.div`
+  .logo {
+    cursor: pointer;
+  }
   .nav {
     font-family: "Nunito Sans";
     font-style: normal;
@@ -68,6 +85,7 @@ const Wrapper = styled.div`
   }
 
   .btn2 {
+    cursor: pointer;
     background-color: #635ea3;
     color: #ffffff;
     font-weight: 700;

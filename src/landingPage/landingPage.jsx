@@ -4,6 +4,7 @@ import ShowCase from "../components/showCase";
 import JobSeekers from "../components/seekers";
 import BSgradient from "../components/BSgradient";
 import Footer from "../components/Footer";
+import News from "../components/News";
 
 export default function landingPage() {
   return (

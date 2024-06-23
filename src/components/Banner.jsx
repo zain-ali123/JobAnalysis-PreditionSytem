@@ -6,38 +6,49 @@ export default function Banner() {
   return (
     <>
       <Wrapper>
-        <div className="Banner row justify-content-center">
-          <div className="image col-lg-10 row">
-            <div className="content col-lg-8">
-              <h1>
-                {" "}
-                Explore New Opportunities
-                <br />
-                on the Go!
-              </h1>
-              <button>Get started</button>
+        <div className="Banner">
+          <div className="row justify-content-center">
+            <div className="col-lg-10 image-container">
+              <div className="image">
+                <div className="content">
+                  <h1>
+                    Explore New Opportunities
+                    <br />
+                    on the Go!
+                  </h1>
+                  <button>Get started</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row justify-content-center">
+            <div className="col-lg-8 dashBoard">
+              <iframe
+                title="layOffs"
+                width="100%"
+                height="686"
+                src="https://app.powerbi.com/view?r=eyJrIjoiZWQ2MmI3ZTctY2I1Zi00MTg0LWE1ZmUtZGRjYmU3ZjhlMGNlIiwidCI6IjEyYjIyMWIzLTA0NjQtNDIyMy04OWU1LTg4ODgzNTc3OGI1OCIsImMiOjl9"
+                frameBorder="0"
+                allowFullScreen="true"
+              ></iframe>
             </div>
           </div>
         </div>
       </Wrapper>
-      <div>
-        <iframe
-          title="layOffs"
-          width="800"
-          height="636"
-          src="https://app.powerbi.com/view?r=eyJrIjoiZWQ2MmI3ZTctY2I1Zi00MTg0LWE1ZmUtZGRjYmU3ZjhlMGNlIiwidCI6IjEyYjIyMWIzLTA0NjQtNDIyMy04OWU1LTg4ODgzNTc3OGI1OCIsImMiOjl9"
-          frameborder="0"
-          allowFullScreen="true"
-        ></iframe>
-      </div>
     </>
   );
 }
 
 const Wrapper = styled.div`
+  .dashBoard {
+    padding-bottom: 100px;
+  }
   .Banner {
-    padding: 100px 0px;
     width: 100%;
+    overflow: hidden; /* Ensure no overflow */
+  }
+  .image-container {
+    padding: 100px 0;
   }
   .image {
     background-image: url(${banner});
@@ -45,31 +56,54 @@ const Wrapper = styled.div`
     background-size: cover;
     height: 328px;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .content {
+    text-align: center;
     margin: auto;
-    margin-left: 20px;
+    max-width: 600px; /* Limit content width */
+    padding: 0 20px;
   }
   h1 {
     color: white;
     font-weight: 700;
     font-size: 48px;
     line-height: 120%;
+    margin-bottom: 20px;
   }
   button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
     padding: 18px 40px;
     gap: 10px;
-    width: 169px;
-    height: 60px;
     background: #ffffff;
     border-radius: 10px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    font-size: 18px;
+    color: #373737;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #f0f0f0;
+  }
+
+  @media only screen and (max-width: 992px) {
+    .image-container {
+      padding: 50px 0;
+    }
+    h1 {
+      font-size: 36px;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    .image {
+      height: 250px;
+    }
+    h1 {
+      font-size: 28px;
+    }
   }
 `;
