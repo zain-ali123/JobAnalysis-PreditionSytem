@@ -36,7 +36,7 @@ export default function Nav() {
               }}
             >
               <div className="btn2" onClick={handleWatchNewsClick}>
-                Watch News
+                Read Blogs
               </div>
               {/* <div className="btn2 mx-2">Login</div> */}
             </div>

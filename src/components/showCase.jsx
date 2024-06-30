@@ -13,7 +13,7 @@ export default function ShowCase() {
                 <span className="colored">
                   Dream
                   <br />
-                  Dev
+                  
                 </span>{" "}
                 Job Today
               </h1>

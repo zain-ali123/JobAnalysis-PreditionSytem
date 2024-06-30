@@ -11,21 +11,21 @@ export default function Seekers() {
           <div className="Employeers row justify-content-between">
             <div className="content col-lg-4 col">
               <div className="col-lg-12 removeOffset">
-                <h2>Employeers</h2>
+                <h2>Job Market Analysis</h2>
                 <div className="line"></div>
-                <p>Free job posting</p>
+                <p>Free job insights</p>
                 <div className="line"></div>
                 <p>
-                  View candidate before deciding
-                  <br />
-                  which are a good fit
+                 Data-Driven Approach For Industries
+                 
                 </p>
                 <div className="line"></div>
 
                 <p>
-                  One format for profile/resume makes it easier to see all the
-                  <br />
-                  key points for evaluating a candidate within seconds
+                Examining industry trends and economic indicators
+                <div className="line"></div>
+
+                Scrutinize job postings, salary data, and demographic shifts to forecast future employment needs.
                 </p>
               </div>
             </div>
