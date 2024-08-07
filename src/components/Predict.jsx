@@ -5,6 +5,8 @@ import axios from "axios";
 import banner from "../assets/Lets237831.svg";
 import boxes from "../assets/Boxes.svg";
 
+
+
 export default function Predict() {
   const [industries, setIndustries] = useState([]);
   const [selectedIndustry, setSelectedIndustry] = useState("");
@@ -89,80 +91,72 @@ export default function Predict() {
     </>
   );
 }
+ 
 const Wrapper = styled.div`
-  .Contact {
+  .dashBoard {
+    padding-bottom: 100px;
+  }
+  .Banner {
     width: 100%;
-    padding: 137px 0px;
-    /* border:2px solid red; */
+    overflow: hidden; /* Ensure no overflow */
   }
-
-  .image2 {
-    width: 410px;
-    margin-right: auto;
-    margin-top: auto;
-  }
-  .btn4 {
-    background: linear-gradient(85.89deg, #49478c 7.82%, #9756ff 117.28%);
-    padding: 14px 96px 14px 95px;
-    border-radius: 10px;
-    width: 100%;
-    color: #ffffff;
-    margin-top: 22px;
-    border: none;
-  }
-  .form {
-    background: #ffffff;
-    box-shadow: 0px 10px 40px rgba(133, 82, 229, 0.1);
-    border-radius: 0px 0px 10px 10px;
-    margin-top: -142px;
-    margin-bottom: 30px;
-    padding: 50px 20px;
+  .image-container {
+    padding: 100px 0;
   }
   .image {
     background-image: url(${banner});
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 328px;
     border-radius: 20px;
-    height: 487px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .image2 {
-    margin-top: 170px;
-  }
-  h3 {
+  .content {
     text-align: center;
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 16px;
+    margin: auto;
+    max-width: 600px; /* Limit content width */
+    padding: 0 20px;
+  }
+  h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    margin-bottom: 20px;
+  }
+  button {
+    display: inline-block;
+    padding: 18px 40px;
+    gap: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    font-size: 18px;
     color: #373737;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
-  .asterik {
-    color: red;
+  button:hover {
+    background-color: #f0f0f0;
   }
-  h5 {
-    font-weight: 400;
-    font-size: 16px;
-  }
-  .form-select {
-    width: 44%;
+
+  @media only screen and (max-width: 992px) {
+    .image-container {
+      padding: 50px 0;
+    }
+    h1 {
+      font-size: 36px;
+    }
   }
 
   @media only screen and (max-width: 576px) {
-    .img,
     .image {
-      display: none;
-      background-image: none;
+      height: 250px;
     }
-  }
-  @media only screen and (max-width: 950px) {
-    .img,
-    .image {
-      display: none;
-    }
-  }
-  @media only screen and (max-width: 1084px) {
-    .img,
-    .image {
-      display: none;
-      background-image: none;
+    h1 {
+      font-size: 28px;
     }
   }
 `;

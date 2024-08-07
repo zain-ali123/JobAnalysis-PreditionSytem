@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import banner from "../assets/BFrame5457.svg";
+import { Link } from "react-router-dom";
 
 export default function Banner() {
   return (
@@ -12,11 +13,12 @@ export default function Banner() {
               <div className="image">
                 <div className="content">
                   <h1>
-                    Explore New Opportunities
+                    Analyze New Insights
                     <br />
                     on the Go!
-                  </h1>
-                  <button>Get started</button>
+                  </h1>s
+                  <Link to="/dropdown"> <button>Get started</button></Link>
+                 
                 </div>
               </div>
             </div>

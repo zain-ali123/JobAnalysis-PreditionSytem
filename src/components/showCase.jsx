@@ -7,7 +7,7 @@ export default function ShowCase() {
       <Wrapper>
         <div className={`showCase row d-flex `}>
           <div className={`content col-lg-6 row `}>
-            <div className="inner col-lg-8">
+            <div className="inner col-lg-8 py-16 ">
               <h1 className="heading">
                 Predict Your{" "}
                 <span className="colored">
