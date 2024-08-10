@@ -1,10 +1,12 @@
 import React from 'react'
 import JobL from "../components/JobL"
+import NavBar from '../components/Navbar'
 
 function WorkAnalysis() {
   return (
     <div>
-      <JobL/>
+      <NavBar />
+      <JobL />
     </div>
   )
 }

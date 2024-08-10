@@ -1,7 +1,6 @@
 import React from "react";
-import Nav from "../components/Nav";
 import ShowCase from "../components/showCase";
-import JobSeekers from "../components/seekers";
+import JobSeekers from "../components/Seekers";
 import BSgradient from "../components/BSgradient";
 import Footer from "../components/Footer";
 import JobL from '../components/JobL'
@@ -11,10 +10,7 @@ export default function landingPage() {
     <div>
       <NavBar />
       <ShowCase />
-      {/* <ServicesSection/> */}
-      {/* <JobSeekers />
-      <JobL/>
-      <BSgradient /> */}
+      <BSgradient />
       <Footer />
     </div>
   );
